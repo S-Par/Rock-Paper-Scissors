@@ -53,18 +53,20 @@ function game() {
     let result = playRound(playerSelection, computerSelection);
     if (result == 'comp') {
       compScore++;
-      console.log('The computer beats you in this round!');
+      console.log('The computer beats you in this round! Your move was: ' + playerSelection);
     }
     else if (result == 'player') {
       playerScore++;
-      console.log('You won this round!');
+      console.log('You won this round! Your move was: ' + playerSelection);
     }
     else{
       ties++;
-      console.log('It was a tie in this round')
+      console.log('It was a tie in this round! Your move was: ' + playerSelection)
     }
   }
   console.log('No of player wins: ' + playerScore);
   console.log('No of computer wins: ' + compScore);
   console.log('No of ties: ' + ties);
 }
+
+game();
